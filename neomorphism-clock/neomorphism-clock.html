@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="neomorphism-clock.css">
+</head>
+<body>
+    <div class="clock">
+        <div class="nut"></div>
+     
+        <div class="indicators">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="sec-hand" >
+            <div class="sec"></div>
+        </div>
+        <div class="min-hand" >
+            <div class="min"></div>
+            <div class="min-rect"></div>
+        </div>
+        <div class="hr-hand" >
+            <div class="hr"></div>
+            <div class=hr-back-arrow></div>
+        </div>
+    </div>
+   <script >
+    var min = document.querySelector('.min-hand');
+    var sec = document.querySelector('.sec-hand');
+    var hr = document.querySelector('.hr-hand');
+    setInterval(function(){
+        let time =new Date();
+        let secs=time.getSeconds()*6;
+        let mins=time.getMinutes()*6;
+        let hrs=time.getHours()*6;
+        console.log(mins);
+        sec.style.transform = `rotateZ(${secs}deg)`;
+        min.style.transform = `rotateZ(${mins}deg)`;
+        hr.style.transform = `rotateZ(${hrs}deg)`;
+    } )
+
+
+   </script> 
+</body>
+</html>

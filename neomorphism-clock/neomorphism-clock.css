@@ -1,0 +1,249 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+body{
+    display: flex;
+    border: 1px solid red;
+    width:100vw;
+    height:100vh;
+    background-color: #8a8064;
+       
+}
+.clock{
+    width:300px;
+    height: 300px;
+    /* border: 1px solid black; */
+    margin:auto auto;
+    box-shadow:  5px 5px 10px #625b47,
+     -5px -5px 10px #b2a581;
+    border-radius: 50%;  
+    position:relative;
+}
+.clock:before{
+    content: "";
+    width:270px;
+    height: 270px;
+    /* border: 1px solid black; */
+    position:absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;    
+    box-shadow: inset 5px 5px 10px #625b47,
+    inset -5px -5px 10px #b2a581;
+}
+.clock::after{
+    content: "";
+    width:100px;
+    height: 100px;
+    /* border: 1px solid black; */
+    position:absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;    
+    box-shadow:  2px 2px 2px #625b47,
+    -2px -2px 5px #b2a581;
+    z-index: -1;
+}
+.clock .nut{
+    width:20px;
+    height: 20px;
+    position:absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow:  2px 2px 2px #625b47,
+    -2px -2px 5px #b2a581;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+.clock .indicators{
+    position:absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.clock .indicators div{
+    width:2px;
+    height:5px;
+    position:absolute;
+    background-color: black;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+} 
+.clock .indicators div:nth-child(1){
+    transform: rotate(0deg) translateY(-120px);
+}
+.clock .indicators div:nth-child(2){
+    transform: rotate(30deg) translateY(-120px);
+}
+.clock .indicators div:nth-child(3){
+    transform: rotate(60deg) translateY(-120px);
+}
+.clock .indicators div:nth-child(4){
+    transform: rotate(90deg) translateY(-120px);
+}
+.clock .indicators div:nth-child(5){
+   transform: rotate(120deg) translateY(-120px);
+}
+.clock .indicators div:nth-child(6){
+    transform: rotate(150deg)translateY(-120px);
+}
+.clock .indicators div:nth-child(7){
+    transform: rotate(180deg) translateY(-120px);
+}
+.clock .indicators div:nth-child(8){
+    transform: rotate(210deg) translateY(-120px);
+}
+.clock .indicators div:nth-child(9){
+    transform: rotate(240deg) translateY(-120px);
+}
+.clock .indicators div:nth-child(10){
+    transform: rotate(270deg) translateY(-120px);
+}
+.clock .indicators div:nth-child(11){
+    transform: rotate(300deg) translateY(-120px);
+}
+.clock .indicators div:nth-child(12){
+    transform: rotate(330deg) translateY(-120px);
+}
+
+.sec-hand,.min-hand,.hr-hand{
+    width: 2px;
+    height: 2px;
+    background-color: rgb(75, 75, 243);
+    position:absolute; 
+    top: 50%;
+    left: 50%;
+    
+    transform: rotate(0deg) translate(-50%, -50%);
+}
+.sec-hand{
+    z-index: 5;
+}
+.min-hand{
+    z-index: 4;
+}
+.hr-hand{
+    z-index: 2;
+}
+.sec{
+    width: 2px;
+    height: 125px;
+    position:absolute; 
+    bottom: -20px;
+    background-color: rgb(75, 75, 243);
+}
+.sec::after{
+    content:"";
+    width: 6px;
+    height: 40px;
+    position:absolute; 
+    bottom: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 150%);
+    background-color: rgb(75, 75, 243);
+}
+
+.min{
+    width: 2px;
+    height: 100px;
+    position:absolute; 
+    background-color: red;
+    bottom: -20px;
+}
+.min::before{
+    content: "";
+   
+    position:absolute; 
+    /* background-color: red; */
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom:50px solid red; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -120%);
+  
+}
+.min::after{
+    content: "";
+   
+    position:absolute; 
+    /* background-color: red; */
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top:30px solid red; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+}
+
+.min-rect{
+        content:"";
+        width: 5px;
+        height: 30px;
+        position:absolute; 
+        bottom: 0;
+        top: 50%;
+        left: 50%;
+    transform: translate(-50%, 50%);
+    background-color: red;
+}
+
+
+.hr{
+    width: 2px;
+    height: 70px;
+    position:absolute; 
+    background-color: black;
+    bottom: -20px;
+}
+.hr::before{
+    content: "";
+   
+    position:absolute; 
+    /* background-color: red; */
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom:30px solid black; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -150%);
+  
+}
+.hr::after{
+    content: "";
+   
+    position:absolute; 
+    /* background-color: red; */
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top:10px solid black; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -150%);
+  
+}
+.hr-back-arrow{
+    
+    content:"";
+    /* width: 6px;
+    height: 40px; */
+    position:absolute; 
+    bottom: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 75%);
+    border-left: 4px solid black;
+    border-right: 4px solid black;
+    border-bottom: 10px solid transparent ;
+    border-top:15px solid black; 
+  
+}
