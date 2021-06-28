@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <div class="back-bird"></div>
+        <img src="download.png" class="logo-header" alt="">
+        <div class="fore-bird"></div>
+    </header>
+    <style>
+        body{
+            height:2000px;
+            font-family: sans-serif;
+        }
+        .header{
+            position:relative;
+            height: 100vh;
+            background:url("one.png") no-repeat center center;
+            background-size: cover;
+            overflow: hidden;
+
+        }
+        header .logo-header{
+            position:absolute;
+            top:4%;
+            left:0%;
+            right:0;
+            display: block;
+            width:100%;
+            height: auto;
+        } 
+        header .fore-bird{
+            position: absolute;
+            top: 199px;
+            right:400px;
+            width: 795px;
+            height:800px;
+            background-image: url("lensy.png");
+            background-repeat: no-repeat;
+            background-position:right bottom ;
+            z-index: 1;
+
+        }
+        .content{
+            max-width: 1140px;
+            margin: 0 auto;
+            font-size: 20px;
+        }
+    </style>
+    <section>
+        <div class="container">
+            <br><br><br><br>
+            <div class="content">
+                <h2>Content</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, dolores libero. Pariatur reprehenderit adipisci nulla, facilis officiis possimus molestias aut cum quibusdam, suscipit nihil soluta porro recusandae dolor expedita nostrum?
+                    Perspiciatis saepe hic sunt, ex odit illo repellat possimus quisquam optio deserunt nulla minima quis quibusdam nemo soluta excepturi dolor sed unde minus? Animi atque neque est sit iusto pariatur.
+                    Fuga itaque vitae perferendis quia ea nisi eligendi, voluptatibus asperiores molestias aperiam sint reiciendis, modi dignissimos rem voluptatem quaerat beatae possimus explicabo consectetur temporibus? Ea id praesentium doloribus modi quod?
+                    Labore voluptatem esse provident, repellat quod voluptate alias, maxime doloribus omnis, fuga culpa. Distinctio fuga quaerat rem nobis libero id dolorum earum debitis natus dicta possimus, quos delectus, ab error?
+                    Quae ratione aperiam officia numquam nisi nulla incidunt mollitia! Deserunt amet minima eligendi consequatur sed atque cum nisi natus, voluptatibus neque, explicabo quidem obcaecati in, corporis tenetur repellendus eum. Rerum.
+                    Cum reiciendis facilis expedita ducimus nihil! Mollitia consequuntur voluptas accusamus itaque autem voluptatem culpa, placeat natus quam molestiae dicta nam nihil excepturi? Maxime, iure inventore nihil molestias ad nisi quam!
+                    Impedit porro corporis distinctio eum at odio totam officia dolorem nostrum hic nam dolores ullam, aperiam harum incidunt praesentium cum accusantium aliquid? Sed molestiae rerum velit aliquid aliquam nemo sequi?
+                    Dolorum quis ex explicabo sed autem, tenetur fuga praesentium. Sed nemo sunt quis molestias alias quo, cum tempore optio, dolores tempora laudantium nostrum fugit velit odio molestiae deleniti sit reiciendis!
+                    Rem expedita quae sint eius, eum perferendis architecto aut sapiente omnis nam similique quis obcaecati explicabo dicta corrupti doloremque praesentium quidem sit maiores accusantium animi nemo. Nostrum sint dolor error.
+                    Ullam delectus accusantium velit, itaque aut tenetur blanditiis iste ex accusamus assumenda officiis nostrum laudantium doloribus neque distinctio eius dignissimos, dolorum laborum? Ullam ducimus ad, facilis mollitia sed accusantium placeat?
+                    Laboriosam sit deleniti et eveniet fuga iure saepe veniam repellendus obcaecati. Ut tempora tempore deserunt aliquid debitis rem, autem magnam nihil sunt eos molestiae exercitationem vero, consequuntur voluptate adipisci ipsum!
+                    Expedita corrupti alias officia, a veritatis amet error porro nulla molestias quam nam optio quae neque eaque ut suscipit distinctio. Numquam voluptatem ea velit saepe, aliquid ut dolorem qui tempore!
+                    Vitae distinctio beatae molestias tenetur cupiditate sint, a numquam nostrum reprehenderit repellendus perferendis voluptatum et eligendi nulla, aliquid non, doloribus in temporibus ab nam nobis optio veniam. Labore, eligendi delectus?
+                    Eveniet similique voluptatum laboriosam sapiente est dolores doloremque fuga, repellendus voluptate nesciunt aspernatur ipsa ad et ex perspiciatis laborum. Nostrum possimus, quas eius tempora nobis quod incidunt iure asperiores eum!
+                    Laborum enim vel nemo quos laboriosam, unde amet atque dicta possimus fugit! Placeat nobis nulla voluptas debitis, laudantium dolor dolore ex commodi obcaecati. Unde, distinctio doloribus hic earum excepturi esse.
+                    Excepturi veritatis maxime numquam accusamus earum, expedita cum cupiditate necessitatibus iusto nisi! Enim laborum expedita veniam iusto commodi delectus cum culpa ipsum et necessitatibus quis ipsa totam, voluptatibus accusantium voluptas!
+                   
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- <script src="js/jquery3.js"></script> -->
+    <script >
+        var logo = document.querySelector('.logo-header'),
+        blurredBird = document.querySelector('.logo-header'),
+        foreBird=document.querySelector('.fore-bird');
+
+        window.addEventListener('scroll',function(){
+            var scrolled = window.scrollY;
+            logo.style.transform = "translateX(0px,"+scrolled/2+"%)";
+            foreBird.style.transform = "translate(0px,-"+scrolled/80+"%)"
+        })
+    </script>
+</body>
+</html>

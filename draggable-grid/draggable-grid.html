@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/jquery.gridster.css">
+</head>
+<style>
+    body{
+        background-color:black;
+    }
+    li{
+       
+        list-style: none;
+        background-color: red;
+        box-shadow: 3px 3px 3px white;
+    }
+    li:nth-child(1){  background-color: aqua;         }
+    li:nth-child(2){   background-color: rgb(65, 139, 139);        }
+    li:nth-child(3){    background-color: rgb(77, 138, 235);       }
+    li:nth-child(4){  background-color: rgb(196, 43, 137);         }
+    li:nth-child(5){   background-color: rgb(248, 201, 140);        }
+    li:nth-child(6){   background-color: rgb(155, 255, 208);        }
+    li:nth-child(7){   background-color: rgb(203, 255, 160);        }
+    li:nth-child(8){   background-color: rgb(248, 255, 155);        }
+    ul{
+        border:1px solid black;
+        width:50%;
+        margin-left: 20%;
+        box-sizing: border-box !important;
+        border: 2px solid burlywood;
+    }
+</style>
+<body>
+    <div class="gridster">
+        <ul>
+            <li data-row="1" data-col="1" data-sizex="1" data-sizey="1"></li>
+            <li data-row="1" data-col="2" data-sizex="1" data-sizey="1"></li>
+            <li data-row="2" data-col="1" data-sizex="1" data-sizey="1"></li>
+    
+            <li data-row="1" data-col="2" data-sizex="2" data-sizey="1"></li>
+            <li data-row="2" data-col="2" data-sizex="2" data-sizey="2"></li>
+    
+            <li data-row="1" data-col="4" data-sizex="1" data-sizey="1"></li>
+            <li data-row="2" data-col="4" data-sizex="2" data-sizey="1"></li>
+            <li data-row="3" data-col="4" data-sizex="1" data-sizey="1"></li>
+    
+            <!-- <li data-row="1" data-col="5" data-sizex="1" data-sizey="1"></li>
+            <li data-row="3" data-col="5" data-sizex="1" data-sizey="1"></li>
+    
+            <li data-row="1" data-col="6" data-sizex="1" data-sizey="1"></li>
+            <li data-row="2" data-col="6" data-sizex="1" data-sizey="2"></li> -->
+        </ul>
+    </div>
+    <script src="js/jquery3.js"></script>
+    <script src="js/gridster.js"></script>
+    <script>
+        $(function(){ //DOM Ready
+
+           
+
+    $(".gridster ul").gridster({
+    widget_margins: [10, 10],
+    widget_base_dimensions: [140, 140],
+    max_rows: 3,
+    extra_cols: 1,
+    resize:{
+        enabled:false,
+    },
+    avoid_overlapped_widgets: false,
+    draggable:{
+        drag: function(event, ui){
+            // console.log(event);
+            // console.log(ui);
+        },
+    }
+}).data('gridster').enable();
+
+});
+console.log("hell")
+    </script>
+</body>
+</html>

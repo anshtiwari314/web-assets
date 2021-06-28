@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/before-after.css">
+    <style>
+
+ /* .resize{
+    display: none !important;
+    opacity: 0.5;
+} */
+ .resize::before{
+    content:"";
+    height:100%;
+    width:100%;
+    position:absolute;
+    background-color: rgba(0,0,0,0.4);
+     
+}
+
+    </style>
+</head>
+<body>
+    <div class="ba-slider">
+        <img src="images/louis-smit-Cob2hJtJ8PY-unsplash.jpg" class="img1">
+        <div class="resize">
+            <img src="images/louis-smit-Cob2hJtJ8PY-unsplash.jpg" class="img2">
+            <div class="img-ab"></div>
+        </div>
+        <span class="handle"></span>
+     </div>
+     <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+     <script src="js/before-after.js"> </script>
+     <script type="text/javascript">
+        $('.ba-slider').beforeAfter();
+      </script>
+</body>
+</html>
